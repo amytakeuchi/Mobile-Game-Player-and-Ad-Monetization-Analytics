@@ -20,22 +20,47 @@ The project contains five interconnected analyses designed around real product a
 
 **Business question**
 
-> Where are the largest opportunities to improve advertising monetization across formats, placements, networks, platforms, and player cohorts?
+> **Where do players drop out of the advertising monetization funnel, and where are the biggest opportunities to improve ad monetization efficiency across formats, placements, networks, platforms, and player cohorts?**
 
-**Hypothesis**
+The analysis first maps the end-to-end advertising funnel:
 
-> Advertising efficiency varies substantially across ad formats, placements, networks, platforms, countries, and player lifecycle stages. High impression volume does not necessarily translate into high monetization efficiency.
+**Installed Players → Active Players → Ad-Exposed Players → Format/Placement Exposure → Monetized Impressions → Ad Revenue**
+
+This distinguishes **reach, engagement, ad exposure, and monetization** rather than treating impressions or revenue as standalone metrics.
+
+**Hypotheses**
+
+> **H1:** Significant player drop-off occurs at different stages of the advertising funnel, limiting the number of players who ultimately contribute to ad revenue.
+
+> **H2:** Advertising monetization efficiency varies meaningfully by **ad format, placement, network, platform, country, and player lifecycle stage**.
+
+> **H3:** High impression volume does not necessarily translate into high revenue efficiency; some lower-volume inventory may generate disproportionately higher **eCPM and revenue/user**.
+
+**Analysis**
+
+Built the advertising funnel at the player/event level:
+
+1. **Installed Players** — unique users in the dataset
+2. **Active Players** — users with ≥1 `session_start`
+3. **Ad-Exposed Players** — users with ≥1 ad impression
+4. **Format/Placement Exposure** — users exposed to specific ad formats or placements
+5. **Monetized Impressions** — ad impressions generating revenue
+6. **Ad Revenue** — total advertising revenue
+
+The funnel is then decomposed across **network × placement × format × platform × country × player lifecycle** to identify where scale and monetization efficiency diverge.
 
 **Result**
 
-> **[INSERT ACTUAL FINDING]**
-> Identified **[highest/lowest-performing placement or network]** as a key monetization opportunity, with **[X% higher/lower eCPM or revenue/user]** than **[comparison]**. The volume-versus-efficiency analysis highlighted **[specific optimization opportunity]**.
+> **[INSERT ACTUAL FUNNEL FINDING]** — The funnel showed **[X%] of installed players reached ad exposure and [X%] of exposed players generated monetized impressions**, identifying **[specific funnel stage]** as the largest opportunity/drop-off point.
+
+> **[INSERT ACTUAL MONETIZATION FINDING]** — **[Placement/network/format]** generated **[X% higher eCPM / revenue per user]** despite **[lower/similar]** impression volume, highlighting a potential inventory optimization opportunity.
 
 **Product implication**
 
-> Optimize inventory based on **revenue efficiency and player impact**, rather than impression volume alone.
+> Improve monetization by optimizing the **entire funnel**, not simply maximizing impressions: increase valuable player exposure, identify high-efficiency inventory, and shift monetization toward formats/placements that generate stronger revenue while monitoring **retention, engagement, and IAP** as guardrails.
 
-**Skills:** Ad monetization diagnostics · KPI development · root-cause analysis · dimensional analysis
+**Key skills:** Ad monetization funnel analysis · KPI development · AdTech analytics · dimensional/root-cause analysis · monetization optimization
+
 
 ---
 
