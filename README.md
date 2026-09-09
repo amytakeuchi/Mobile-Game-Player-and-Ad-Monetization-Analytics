@@ -1,5 +1,5 @@
 # Mobile-Game-Player-and-Ad-Monetization-Analytics
-# ## Overall Product Question
+# Overall Product Question
 
 > **How can a mobile game optimize player acquisition and advertising monetization while preserving player engagement and long-term player value?**
 > 
