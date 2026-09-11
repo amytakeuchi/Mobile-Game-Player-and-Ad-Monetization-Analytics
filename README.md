@@ -39,6 +39,8 @@ Key areas include:
 | H2 | Ad monetization efficiency varies meaningfully by format/placement, network, platform, country, and lifecycle stage. | **Supported.** eCPM ranges from roughly $1 to $28 across network-placement combinations, and is highest immediately post-install before declining as players mature. | Shift impression volume toward higher-yield network/placement combinations and tune ad frequency by lifecycle stage, optimizing eCPM and retention jointly rather than maximizing impressions alone. |
 | H3 | High impression volume does not necessarily mean high revenue efficiency. | **Strongly supported.** ironSource/LevelPlay generates $28.17 eCPM on just 10.9K impressions, while AppLovin generates only $1.88 eCPM across 3.33M impressions. | Prioritize scaling lower-volume, high-eCPM placements where added inventory won't dilute yield, while optimizing or reducing exposure on high-volume, low-eCPM placements. |
 
+<img src="image/h1_viz.png" title=" ">
+
 ---
 
 ### 3. Acquisition Channel → Retention/LTV
