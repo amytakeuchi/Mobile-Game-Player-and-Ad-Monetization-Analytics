@@ -1,17 +1,23 @@
 # Mobile Game Player Analytics: Monetization, Engagement & LTV
 
-**Product Analytics | Gaming | AdTech | Monetization | User Acquisition | LTV**
+**Product Analytics | Gaming | AdTech | Monetization | User Acquisition | Experimentation | LTV**
 
-> **How can a mobile game acquire high-quality players, optimize advertising monetization, and maximize long-term player value without compromising engagement or IAP revenue?**
+> **How can a mobile game acquire high-quality players, optimize advertising and IAP monetization, and maximize long-term player value without compromising engagement and retention?**
 
-This project analyzes anonymized mobile game event data to understand the relationship between **player acquisition, engagement, advertising behavior, monetization, and long-term LTV**.
+This project analyzes anonymized mobile game event data to understand the relationship between **user acquisition, player engagement, retention, advertising behavior, IAP conversion, monetization, and long-term LTV.**
 
-Rather than treating ad revenue, retention, and acquisition as isolated KPIs, the analysis builds an end-to-end view of the player lifecycle:
+Rather than treating acquisition, engagement, advertising, and IAP as isolated KPIs, the analysis builds an end-to-end view of the player and monetization lifecycle:
 
-**Acquisition → Engagement → Retention → Ad Monetization → IAP → Long-Term LTV**
+User Acquisition → Gameplay & Engagement → Retention → Ad Exposure → Ad Monetization → IAP Conversion → Long-Term LTV
 
-The project contains five interconnected analyses designed around real product and monetization decisions.
+The project combines **product analytics, AdTech, user acquisition, monetization analytics, and experimentation** to answer practical questions faced by gaming and consumer-product teams.
 
+Key areas include:
+
+- **IAP Monetization:** How do payer conversion and IAP revenue contribute to overall player economics alongside advertising revenue?
+- **AdTech & Advertising Monetization:** Which ad networks and placements generate the strongest combination of impression volume, eCPM, ad revenue, and player value?
+- **User Acquisition:** Which acquisition channels and player segments generate high-quality users relative to acquisition cost?
+- **Product Engagement:** How do player engagement, session behavior, and retention relate to downstream monetization?
 ---
 
 # Executive Summary
