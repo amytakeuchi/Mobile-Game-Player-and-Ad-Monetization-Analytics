@@ -49,8 +49,9 @@ Key areas include:
 | H2 | High install-volume channels do not necessarily generate the highest retention or LTV. | **Supported.** Google and Meta drive the most installs but produce substantially lower LTV than smaller channels like Liftoff/Vungle and Apple Search Ads. | Move UA allocation from install-volume optimization to LTV- and retention-based targets, using incremental value by channel as the primary scaling criterion. |
 | H3 | Channel quality varies by platform and geography. | **Supported.** iOS shows higher D7 retention and LTV than Android across major channels (Meta, Google, Liftoff/Vungle); Pangle performs especially strongly as an iOS-only channel. | Optimize UA budgets by channel × platform rather than channel alone, prioritizing high-LTV platform segments while validating extreme results against sample size before scaling spend. |
 
+---
 # Detailed Results
-## 1. Ad Monetization Funnel & Diagnostic Analysis
+## 2. Ad Monetization Funnel & Diagnostic Analysis
 
 **Business question**
 
@@ -69,6 +70,41 @@ This distinguishes **reach, engagement, ad exposure, and monetization** rather t
 > **H2:** Advertising monetization efficiency varies meaningfully by **ad format, placement, network, platform, country, and player lifecycle stage**.
 
 > **H3:** High impression volume does not necessarily translate into high revenue efficiency; some lower-volume inventory may generate disproportionately higher **eCPM and revenue/user**.
+**Metrics**
+
+### Primary
+
+* Ad revenue/user
+* Ad revenue/DAU
+* eCPM
+
+### Secondary
+
+* Ad impressions
+* Impressions/user
+* Unique users exposed
+* Revenue/impression
+* Rewarded-ad share
+* Ad revenue by day since install
+
+### Dimensions
+
+* Ad format
+* Placement
+* Network
+* Platform
+* Country
+* Day since install
+* Install week
+* Event hour
+
+### Guardrails
+
+* D1 retention
+* D7 retention
+* Sessions/user
+* IAP revenue/user
+* Total revenue/user
 
 **Analysis**
 
@@ -96,55 +132,10 @@ The funnel is then decomposed across **network × placement × format × platfor
 **Key skills:** Ad monetization funnel analysis · KPI development · AdTech analytics · dimensional/root-cause analysis · monetization optimization
 
 
----
-
-## 2. Engagement → Ad Monetization → LTV
-
-**Business question**
-
-> How does early player engagement relate to advertising monetization and long-term player value?
-
-**Hypothesis**
-
-> More engaged players generate greater advertising revenue and higher long-term LTV, but the relationship between ad exposure and player value may be nonlinear.
-
-**Result**
-
-> **[INSERT ACTUAL FINDING]**
-> Players in the **[high-engagement segment/tier]** generated **[X%] higher ad revenue/user** and **[X%] higher LTV** than **[comparison group]**. Ad exposure showed **[linear/nonlinear/diminishing-return]** patterns across LTV and retention.
-
-**Product implication**
-
-> The objective should not be simply to maximize ad impressions. The stronger strategy is to identify the **level and type of monetization that supports sustainable player value**.
-
-**Skills:** Product analytics · behavioral analysis · cohort analysis · LTV · regression · statistical modeling
 
 ---
 
-## 3. Player Segmentation & Monetization Personas
-
-**Business question**
-
-> Are there distinct player segments with materially different engagement, monetization, retention, and LTV profiles?
-
-**Hypothesis**
-
-> Players exhibit distinct behavioral and monetization profiles, making a one-size-fits-all monetization strategy suboptimal.
-
-**Result**
-
-> **[INSERT ACTUAL FINDING]**
-> Identified **[X] behavioral segments** with materially different **D7 retention, ad revenue/user, IAP revenue/user, and LTV**. The highest-value segment represented **[X%] of players but [Y%] of total value**.
-
-**Product implication**
-
-> Monetization and engagement strategies should be **segment-specific**, with different interventions for high-value, ad-dependent, casual, and potentially at-risk players.
-
-**Skills:** Behavioral segmentation · K-Means/GMM · player personas · personalization · monetization strategy
-
----
-
-## 4. Acquisition Channel → Retention & LTV
+## 3. Acquisition Channel → Retention & LTV
 
 **Business question**
 
@@ -153,6 +144,19 @@ The funnel is then decomposed across **network × placement × format × platfor
 **Hypothesis**
 
 > Acquisition channels differ meaningfully in downstream player quality; high install volume does not necessarily indicate high-quality acquisition.
+
+**Channel-Level Metrics**
+* Users acquired
+* D1 retention
+* D7 retention
+* Sessions/user
+* Active days
+* Ad revenue/user
+* IAP revenue/user
+* IAP conversion
+* Total revenue/user
+* D8–D180 LTV
+
 
 **Result**
 
@@ -169,28 +173,6 @@ The funnel is then decomposed across **network × placement × format × platfor
 
 ---
 
-## 5. Rewarded vs. Other Ad Formats
-
-**Business question**
-
-> How does rewarded advertising compare with other ad formats in monetization efficiency and downstream player value?
-
-**Hypothesis**
-
-> Rewarded ads may provide stronger monetization efficiency and player value, but excessive exposure could produce diminishing returns or negative engagement effects.
-
-**Result**
-
-> **[INSERT ACTUAL FINDING]**
-> Rewarded exposure was associated with **[X% higher/lower] eCPM**, **[X% higher/lower] ad revenue/user**, and **[X% higher/lower] LTV** versus **[comparison group]**. Rewarded-ad exposure showed **[describe exposure/LTV or retention pattern]**.
-
-**Product implication**
-
-> Optimize rewarded advertising around the **balance between monetization efficiency and player experience**, rather than maximizing exposure.
-
-**Skills:** AdTech analytics · rewarded advertising · monetization trade-offs · retention · observational modeling
-
----
 
 # The Product Story
 
@@ -248,429 +230,6 @@ These analyses are designed to answer one overarching product question:
 
 ---
 
-# 1. Ad Monetization Funnel & Diagnostic Analysis
-
-## Business Question
-
-> **Where are the biggest opportunities to improve advertising monetization across ad formats, placements, networks, platforms, and player cohorts?**
-
-Instead of measuring impressions alone, this analysis decomposes advertising revenue into:
-
-**Players × Impressions/Player × Revenue/Impression**
-
-This makes it possible to distinguish between:
-
-* high-volume / low-efficiency inventory
-* low-volume / high-efficiency inventory
-* high-value networks
-* underperforming placements
-* lifecycle changes in monetization efficiency
-
-## Metrics
-
-### Primary
-
-* Ad revenue/user
-* Ad revenue/DAU
-* eCPM
-
-### Secondary
-
-* Ad impressions
-* Impressions/user
-* Unique users exposed
-* Revenue/impression
-* Rewarded-ad share
-* Ad revenue by day since install
-
-### Dimensions
-
-* Ad format
-* Placement
-* Network
-* Platform
-* Country
-* Day since install
-* Install week
-* Event hour
-
-### Guardrails
-
-* D1 retention
-* D7 retention
-* Sessions/user
-* IAP revenue/user
-* Total revenue/user
-
-## Key Analysis
-
-### Network × Placement Performance
-
-Evaluate each network-placement combination on:
-
-* impression volume
-* eCPM
-* revenue/user
-* total revenue
-
-This identifies inventory that is both **material and actionable**.
-
-### Volume vs. Efficiency
-
-**X:** Impressions
-**Y:** eCPM
-**Bubble:** Revenue
-
-This separates scale from monetization efficiency.
-
-### Monetization Over Player Lifecycle
-
-Track eCPM and ad revenue/user from:
-
-**Day 0 → Day 7**
-
-to understand how monetization evolves as players progress through the game.
-
----
-
-# 2. Player Engagement → Ad Monetization → LTV
-
-## Business Question
-
-> **How does early player behavior relate to advertising monetization and long-term player value?**
-
-This analysis connects product behavior to business outcomes.
-
-## User-Level Feature Engineering
-
-A D0–D7 player feature table is constructed for each `user_id`.
-
-### Engagement
-
-* Session count
-* Active days
-* Sessions/day
-* Sessions/active day
-* First/last active day
-* D1 retention
-* D3 retention
-* D7 retention
-
-### Advertising
-
-* Ad impressions
-* Rewarded impressions
-* Interstitial impressions
-* Ad revenue
-* Ad revenue/user
-* Impressions/session
-* Rewarded ads/session
-* Unique placements
-* Unique networks
-
-### IAP
-
-* Purchase count
-* IAP revenue
-* Payer flag
-* Average order value
-
-## Analysis Framework
-
-```text
-Early Engagement
-       │
-       ▼
-Ad Exposure ───────► Ad Monetization
-       │                    │
-       │                    ▼
-       └──────────────► Long-Term LTV
-                              ▲
-                              │
-                             IAP
-```
-
-Regression is used to evaluate associations between early behavior and future LTV while controlling for observable player characteristics.
-
-Example:
-
-```text
-log(LTV) ~
-    engagement
-    + ad_exposure
-    + IAP_behavior
-    + platform
-    + country
-    + acquisition_channel
-```
-
-**Important:** This is observational analysis. Regression coefficients are interpreted as **associations, not causal effects**.
-
----
-
-# 3. Player Segmentation & Monetization Personas
-
-## Business Question
-
-> **Are there distinct player segments with meaningfully different engagement, advertising, IAP, retention, and LTV profiles?**
-
-A user-level behavioral feature table is transformed using `log1p` where appropriate and standardized before clustering.
-
-### Candidate Features
-
-**Engagement**
-
-* Sessions
-* Active days
-* Sessions/active day
-* D1
-* D7
-
-**Advertising**
-
-* Ad impressions
-* Rewarded ads
-* Interstitials
-* Ad revenue
-* Ad revenue/user
-* Exposure intensity
-
-**IAP**
-
-* Purchase count
-* IAP revenue
-* Payer flag
-* AOV
-
-### Modeling
-
-* K-Means
-* Optional Gaussian Mixture Models
-* Silhouette score
-* Cluster size
-* Business interpretability
-
-Cluster selection is based not only on statistical separation but also on whether the resulting segments support **meaningful product decisions**.
-
-## Example Persona Framework
-
-Actual labels are assigned after examining the data.
-
-**Highly Engaged Monetizers**
-
-* High engagement
-* High retention
-* Strong ad + IAP monetization
-* High LTV
-
-**Ad-Dependent Players**
-
-* High ad engagement
-* Lower IAP contribution
-* Strong ad monetization
-
-**Casual Players**
-
-* Low engagement
-* Low ad exposure
-* Lower LTV
-
-**High-Value / Declining Players**
-
-* Historically valuable
-* Declining engagement
-* Potential re-engagement opportunity
-
----
-
-# 4. Acquisition Channel → Retention/LTV
-
-## Business Question
-
-> **Which acquisition channels bring players who remain engaged and generate long-term value?**
-
-The analysis evaluates:
-
-```text
-Channel
-   ↓
-Engagement
-   ↓
-Retention
-   ↓
-Monetization
-   ↓
-LTV
-```
-
-## Channel-Level Metrics
-
-* Users acquired
-* D1 retention
-* D7 retention
-* Sessions/user
-* Active days
-* Ad revenue/user
-* IAP revenue/user
-* IAP conversion
-* Total revenue/user
-* D8–D180 LTV
-
-## Key Comparisons
-
-### Channel Quality
-
-Compare channels on:
-
-**Volume × Retention × Monetization × LTV**
-
-### Volume vs. Quality
-
-**X:** Acquired users
-**Y:** LTV
-**Bubble:** Total revenue
-
-This highlights:
-
-* High volume / high value
-* High volume / low value
-* Low volume / high value
-* Low volume / low value
-
-### Channel × Platform
-
-Compare channel performance across:
-
-* Android
-* iOS
-
-to identify channel/platform interaction effects.
-
-## Limitation
-
-Because acquisition spend is not included in the dataset, the analysis does **not** estimate:
-
-* CPI
-* CAC
-* ROAS
-* ROI
-
-Instead, it answers:
-
-> **Which channels appear to acquire higher-quality players?**
-
----
-
-# 5. Rewarded vs. Other Ad Formats
-
-## Business Question
-
-> **Which advertising format provides the best balance between monetization efficiency, engagement, retention, and long-term player value?**
-
-The key trade-off is:
-
-```text
-                 MONETIZATION
-                      ▲
-                      │
-                      │
-                      │
-PLAYER EXPERIENCE ────┼────►
-                      │
-                      │
-                      ▼
-                 PLAYER VALUE
-```
-
-The goal is **not** simply to maximize ad revenue.
-
-It is to identify whether an advertising format is associated with **sustainable player value**.
-
-## Exposure Cohorts
-
-Where supported by the data, players are grouped into:
-
-* No ad exposure
-* Rewarded only
-* Non-rewarded only
-* Rewarded + non-rewarded
-
-## Metrics
-
-### Monetization
-
-* eCPM
-* Ad revenue/user
-* Impressions/user
-* Revenue/impression
-
-### Engagement
-
-* Sessions/user
-* Active days
-
-### Retention
-
-* D1
-* D3
-* D7
-
-### IAP
-
-* Payer conversion
-* IAP revenue/user
-* Purchase frequency
-* AOV
-
-### Long-Term Value
-
-* `ltv_d8_d180`
-
-## Rewarded Exposure Intensity
-
-Exposure is bucketed into ranges such as:
-
-```text
-0
-1–2
-3–5
-6–10
-11+
-```
-
-Then compare:
-
-**Rewarded ads/player → LTV**
-
-and
-
-**Rewarded ads/player → D7 retention**
-
-This tests for potential **diminishing returns or ad fatigue**.
-
----
-
-# Target: Long-Term Player LTV
-
-The central prediction target is:
-
-### `ltv_d8_d180`
-
-Total revenue generated by a player between **day 8 and day 180** after installation.
-
-It includes:
-
-* In-app purchase revenue
-* Advertising revenue
-
-Non-paying players have an LTV of `0`.
-
-The portfolio therefore focuses on the fundamental UA/product problem:
-
-> **Can early behavioral signals tell us which players will generate long-term value?**
-
----
-
 # Dataset
 
 The dataset contains event-level records from approximately:
@@ -710,46 +269,6 @@ Each player can have multiple event records.
 `ltv_d8_d180`
 
 The target represents revenue generated between **days 8–180** after install.
-
----
-
-# Analytical Approach
-
-The project follows a product analytics workflow:
-
-### 1. Event-Level Data
-
-Raw session, IAP, and ad-impression events.
-
-↓
-
-### 2. Feature Engineering
-
-Aggregate behavioral signals to the player level.
-
-↓
-
-### 3. Diagnostic Analysis
-
-Identify monetization, engagement, retention, and acquisition patterns.
-
-↓
-
-### 4. Statistical Analysis
-
-Use confidence intervals, hypothesis tests, regression, and clustering where appropriate.
-
-↓
-
-### 5. Segmentation
-
-Identify distinct behavioral and monetization profiles.
-
-↓
-
-### 6. Business Interpretation
-
-Translate analytical findings into product and monetization decisions.
 
 ---
 
@@ -912,36 +431,6 @@ It combines:
 
 ---
 
-# Project Structure
-
-```text
-mobile-game-player-analytics/
-│
-├── data/
-│   ├── train.csv
-│   ├── test.csv
-│   └── sample_submission.csv
-│
-├── notebooks/
-│   ├── 01_ad_monetization_funnel.ipynb
-│   ├── 02_engagement_ad_ltv.ipynb
-│   ├── 03_player_segmentation.ipynb
-│   ├── 04_acquisition_ltv.ipynb
-│   └── 05_rewarded_vs_other_ads.ipynb
-│
-├── src/
-│   ├── feature_engineering.py
-│   ├── metrics.py
-│   └── modeling.py
-│
-├── visualizations/
-│
-├── README.md
-└── requirements.txt
-```
-
----
-
 # Tools & Technologies
 
 **Python**
@@ -973,26 +462,21 @@ mobile-game-player-analytics/
 
 ---
 
-# Final Takeaway
+## Final Takeaway
 
-The portfolio is built around a simple product principle:
+The analysis consistently supports one principle: **volume and value are not the same thing, at every stage of the player lifecycle.**
 
-> ### **The goal is not to maximize installs, impressions, or ad revenue in isolation. The goal is to acquire and monetize players in a way that maximizes sustainable long-term player value.**
+- The largest acquisition channels (Google, Meta) drive the most installs but produce the lowest LTV (~$15–$23), while smaller channels like Pangle and Apple Search Ads generate 4–7x higher LTV (~$102–$109) per user.
+- The highest-volume ad inventory is often the least efficient — AppLovin delivers $1.88 eCPM across 3.33M impressions, while ironSource/LevelPlay delivers $28.17 eCPM on just 10.9K impressions.
+- Only ~9.3% of active players ever convert to an IAP payer, meaning the largest monetization opportunity isn't increasing spend among existing payers — it's converting the 90.7% who never purchase.
+- Hybrid monetizers (ad + IAP) generate the largest total revenue opportunity even though IAP-only players are more valuable individually, because hybrid players combine meaningful per-user value with a far larger base.
+
+Taken together, these results argue against optimizing installs, impressions, or ad revenue in isolation. In every case — acquisition, ad inventory, and monetization type — the highest-volume option was not the highest-value one, and the biggest opportunities showed up in gaps (unconverted payers, unexposed players, underscaled high-eCPM inventory) rather than in scaling what already works.
 
 The analysis connects:
 
-**Acquisition**
+**Acquisition → Engagement → Retention → Ad Exposure → Ad Monetization → IAP Conversion → Long-Term LTV**
 
-→ **Engagement**
+with player segmentation and channel/inventory-level breakdowns identifying *where* in that chain value concentrates and *where* it's being left on the table.
 
-→ **Retention**
-
-→ **Advertising**
-
-→ **IAP**
-
-→ **LTV**
-
-and uses player segmentation to identify **where different strategies may create the most value**.
-
-This provides a framework for making practical decisions around **UA allocation, ad placement, rewarded advertising, player experience, and long-term monetization.**
+This provides a practical framework for UA allocation, ad placement/network mix, rewarded-ad frequency, IAP conversion strategy, and long-term monetization — prioritized by LTV and efficiency, not volume.
