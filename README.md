@@ -21,7 +21,35 @@ Key areas include:
 ---
 
 # Executive Summary
+### 1. In-App Purchase Monetization Funnel & Diagnostic Analysis
 
+| # | Hypothesis | Result | Business Implication |
+|---|---|---|---|
+| H1 | High installs ≠ high IAP monetization quality — converting engaged non-payers is a bigger lever than increasing spend among existing payers. | **Supported.** Of 61,800 active players, only 5,738 (~9.3%) become IAP payers — first-purchase conversion is a far larger funnel opportunity than increasing spend among existing payers. | Prioritize first-purchase conversion among engaged non-payers via personalized offers and lifecycle incentives, while growing purchase frequency among repeat payers without harming engagement or retention. |
+| H2 | IAP monetization efficiency varies significantly across acquisition channels. | **Supported.** Pangle and Liftoff/Vungle generate substantially higher LTV per user than high-volume channels like Google and Meta — acquisition quality, not just volume, drives IAP value. | Allocate incremental acquisition spend based on expected IAP LTV and LTV/CAC rather than volume, while validating high-LTV small channels before scaling them materially. |
+| H3 | Hybrid monetizers (ad + IAP) generate higher total revenue and LTV than single-channel monetizers. | **Partially supported.** Hybrid monetizers generate substantially higher total revenue and LTV than ad-only players, but IAP-only players have the highest revenue and LTV *per user*. Hybrid players still represent the largest-scale opportunity, pairing meaningful per-user value with a much larger base than IAP-only players. | Treat hybrid monetization as the key scaling opportunity: identify high-engagement ad-only players and test targeted IAP offers that add purchase revenue without reducing ad engagement or retention. |
+
+---
+
+### 2. Ad Monetization Funnel & Diagnostic Analysis
+
+| # | Hypothesis | Result | Business Implication |
+|---|---|---|---|
+| H1 | Ad exposure (not impression yield) is the primary constraint on total ad revenue. | **Partially supported.** 82.7% of active players (51,095/61,800) are ad-exposed, leaving ~17% unexposed. But with 18.6M impressions at a $4.05 eCPM, improving monetization yield among already-exposed players may be as large an opportunity as expanding exposure. | Expand ad penetration among the unexposed ~17% of active players while shifting impression mix toward higher-eCPM network/placement combinations, using retention as a guardrail. |
+| H2 | Ad monetization efficiency varies meaningfully by format/placement, network, platform, country, and lifecycle stage. | **Supported.** eCPM ranges from roughly $1 to $28 across network-placement combinations, and is highest immediately post-install before declining as players mature. | Shift impression volume toward higher-yield network/placement combinations and tune ad frequency by lifecycle stage, optimizing eCPM and retention jointly rather than maximizing impressions alone. |
+| H3 | High impression volume does not necessarily mean high revenue efficiency. | **Strongly supported.** ironSource/LevelPlay generates $28.17 eCPM on just 10.9K impressions, while AppLovin generates only $1.88 eCPM across 3.33M impressions. | Prioritize scaling lower-volume, high-eCPM placements where added inventory won't dilute yield, while optimizing or reducing exposure on high-volume, low-eCPM placements. |
+
+---
+
+### 3. Acquisition Channel → Retention/LTV
+
+| # | Hypothesis | Result | Business Implication |
+|---|---|---|---|
+| H1 | Acquisition channels differ in downstream player quality. | **Supported.** Pangle and Apple Search Ads produce the highest observed LTV (~$109 and ~$102), versus ~$23 and ~$15 for high-volume channels Meta and Google. | Shift incremental UA investment toward higher-LTV channels, validate small-sample winners through controlled testing, and set channel-specific LTV/CAC targets rather than optimizing for installs alone. |
+| H2 | High install-volume channels do not necessarily generate the highest retention or LTV. | **Supported.** Google and Meta drive the most installs but produce substantially lower LTV than smaller channels like Liftoff/Vungle and Apple Search Ads. | Move UA allocation from install-volume optimization to LTV- and retention-based targets, using incremental value by channel as the primary scaling criterion. |
+| H3 | Channel quality varies by platform and geography. | **Supported.** iOS shows higher D7 retention and LTV than Android across major channels (Meta, Google, Liftoff/Vungle); Pangle performs especially strongly as an iOS-only channel. | Optimize UA budgets by channel × platform rather than channel alone, prioritizing high-LTV platform segments while validating extreme results against sample size before scaling spend. |
+
+# Detailed Results
 ## 1. Ad Monetization Funnel & Diagnostic Analysis
 
 **Business question**
