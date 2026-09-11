@@ -303,15 +303,20 @@ The target represents revenue generated between **days 8–180** after install.
 
 # Key Product Metrics
 
-| Area                   | Metrics                                         |
-| ---------------------- | ----------------------------------------------- |
-| **Engagement**         | Sessions/user, active days, sessions/active day |
-| **Retention**          | D1, D3, D7                                      |
-| **Advertising**        | Impressions/user, eCPM, ad revenue/user         |
-| **IAP**                | Payer conversion, IAP revenue/user, AOV         |
-| **Total Monetization** | Total revenue/user                              |
-| **Long-Term Value**    | D8–D180 LTV                                     |
-| **Acquisition**        | Users acquired, channel share, channel LTV      |
+| **Area** | **Metrics** |
+|---|---|
+| **Engagement** | Sessions/user, active days/user, sessions/active day, ad exposure/user |
+| **Funnel** | Install → Active → Ad-exposed → Monetized ad impression → Payer |
+| **Retention** | D1, D3, D7 retention, retained users by cohort |
+| **Advertising / AdTech** | Ad impressions, impressions/user, ad exposure rate, eCPM, ad revenue/user, ad revenue/DAU, network share, placement share |
+| **IAP Monetization** | Payer conversion, IAP revenue/user, IAP revenue/payer, AOV, purchase frequency |
+| **Total Monetization** | Total revenue/user, total revenue/DAU, ad revenue share, IAP revenue share |
+| **Long-Term Value** | D8–D180 LTV, LTV by acquisition channel, LTV by player segment |
+| **Player Segmentation** | Engagement tier, retention tier, payer/non-payer, monetization tier, behavioral segments |
+| **User Acquisition** | Installs, channel share, CPI, acquisition spend, effective CPI |
+| **UA Economics** | CAC, payer CAC, ROAS, LTV/CPI, revenue/spend, channel-level profitability |
+| **Experimentation** | Treatment lift, D1/D7 retention lift, conversion lift, confidence intervals, statistical significance |
+| **Guardrails** | D1/D7 retention, sessions/user, IAP revenue/user, total revenue/user, ad exposure intensity |
 
 ---
 
