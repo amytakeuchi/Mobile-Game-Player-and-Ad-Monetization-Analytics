@@ -29,7 +29,7 @@ Key areas include:
 | H2 | IAP monetization efficiency varies significantly across acquisition channels. | **Supported.** Pangle and Liftoff/Vungle generate substantially higher LTV per user than high-volume channels like Google and Meta — acquisition quality, not just volume, drives IAP value. | Allocate incremental acquisition spend based on expected IAP LTV and LTV/CAC rather than volume, while validating high-LTV small channels before scaling them materially. |
 | H3 | Hybrid monetizers (ad + IAP) generate higher total revenue and LTV than single-channel monetizers. | **Partially supported.** Hybrid monetizers generate substantially higher total revenue and LTV than ad-only players, but IAP-only players have the highest revenue and LTV *per user*. Hybrid players still represent the largest-scale opportunity, pairing meaningful per-user value with a much larger base than IAP-only players. | Treat hybrid monetization as the key scaling opportunity: identify high-engagement ad-only players and test targeted IAP offers that add purchase revenue without reducing ad engagement or retention. |
 
-<img src="images/h1_viz.png" title=" ">
+<img src="images/h1_viz.png" width="800" title=" ">
 ---
 
 ### 2. Ad Monetization Funnel & Diagnostic Analysis
