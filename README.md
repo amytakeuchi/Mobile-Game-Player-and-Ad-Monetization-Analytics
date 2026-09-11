@@ -1,4 +1,4 @@
-# Mobile Game Player Analytics: Monetization, Engagement & LTV
+# Mobile Game Player & AdTech Analytics: Monetization, Engagement & LTV
 
 **Product Analytics | Gaming | AdTech | Monetization | User Acquisition | Experimentation | LTV**
 
