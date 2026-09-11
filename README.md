@@ -30,6 +30,7 @@ Key areas include:
 | H3 | Hybrid monetizers (ad + IAP) generate higher total revenue and LTV than single-channel monetizers. | **Partially supported.** Hybrid monetizers generate substantially higher total revenue and LTV than ad-only players, but IAP-only players have the highest revenue and LTV *per user*. Hybrid players still represent the largest-scale opportunity, pairing meaningful per-user value with a much larger base than IAP-only players. | Treat hybrid monetization as the key scaling opportunity: identify high-engagement ad-only players and test targeted IAP offers that add purchase revenue without reducing ad engagement or retention. |
 
 <img src="images/h1_viz.png" title=" ">
+
 ---
 
 ### 2. Ad Monetization Funnel & Diagnostic Analysis
@@ -41,6 +42,7 @@ Key areas include:
 | H3 | High impression volume does not necessarily mean high revenue efficiency. | **Strongly supported.** ironSource/LevelPlay generates $28.17 eCPM on just 10.9K impressions, while AppLovin generates only $1.88 eCPM across 3.33M impressions. | Prioritize scaling lower-volume, high-eCPM placements where added inventory won't dilute yield, while optimizing or reducing exposure on high-volume, low-eCPM placements. |
 
 <img src="images/h2_viz.png" width="800" title=" ">
+
 ---
 
 ### 3. Acquisition Channel → Retention/LTV
@@ -52,6 +54,7 @@ Key areas include:
 | H3 | Channel quality varies by platform and geography. | **Supported.** iOS shows higher D7 retention and LTV than Android across major channels (Meta, Google, Liftoff/Vungle); Pangle performs especially strongly as an iOS-only channel. | Optimize UA budgets by channel × platform rather than channel alone, prioritizing high-LTV platform segments while validating extreme results against sample size before scaling spend. |
 
 <img src="images/h3_viz.png" title=" ">
+
 ---
 # Detailed Results
 ## 1. In-App Purchase Monetization Funnel & Diagnostic Analysis
